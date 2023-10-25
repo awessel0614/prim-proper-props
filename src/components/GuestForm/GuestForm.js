@@ -3,12 +3,13 @@ import axios from 'axios';
 
 function GuestForm (props) {
 
-    const [newGuestName, setNewGuestName] = useState('test');
-    const [newGuestMeal, setNewGuestMeal] = useState('test');
+    const [newGuestName, setNewGuestName] = useState([]);
+    const [newGuestMeal, setNewGuestMeal] = useState([]);
 
     const addGuest = () => {
+        
         axios.post('/guests', { name: newGuestName, kidsMeal: newGuestMeal })
-          .then(response => {
+          .then((response) => {
             // clear inputs
             setNewGuestName('');
             setNewGuestMeal(false);

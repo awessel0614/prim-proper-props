@@ -2,11 +2,11 @@
 
 function SilverWare(props) {
 
-    return(
+    return (
         <>
-                <div>
-                    <h1>{props.name}: {props.count}</h1>
-                </div>
+            <div>
+                <h1>{props.name}: {props.count}</h1>
+            </div>
         </>
     )
 }
